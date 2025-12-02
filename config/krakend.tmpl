@@ -1,0 +1,199 @@
+{
+  "$schema": "https://www.krakend.io/schema/v2.11/krakend.json",
+  "version": 3,
+  "name": "KrakenD - API Gateway",
+  "timeout": "80000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "json",
+  "port": 8080,
+  "plugin": {
+    "pattern": ".so",
+    "folder": "/opt/krakend/plugins"
+  },
+  "endpoints": [
+    {
+  "endpoint": "/carros/matrix",
+  "method": "GET",
+  "output_encoding": "json",
+  "backend": [
+    {
+      "url_pattern": "/api/AvailabilityByPlace",
+      "encoding": "json",
+      "method": "GET",
+      "host": [
+        "https://api.rentlynetwork.com"
+      ],
+      "group" : "rently_results",
+      "is_collection": true,
+      "extra_config": {
+        "proxy": {
+          "flatmap_filter": [
+            { "type": "move", "args": ["collection.*.model.brand", "collection.*.model_car"] },
+            { "type": "move", "args": ["collection.*.currency", "collection.*.currency"] },
+            { "type": "move", "args": ["collection.*.deliveryPlace.city", "collection.*.city"] },
+            { "type": "move", "args": ["collection.*.deliveryPlace.address", "collection.*.address"] },
+            { "type": "move", "args": ["collection.*.deliveryPlace.iata", "collection.*.iata"] },
+            { "type": "move", "args": ["collection.*.deliveryPlace.type", "collection.*.type_location"] },
+            { "type": "move", "args": ["collection.*.customerPrice", "collection.*.rate_amount"] },
+            { "type": "move", "args": ["collection.*.rateCode", "collection.*.rate_code"] },
+            { "type": "del", "args": ["collection.*.model"] },
+            { "type": "del", "args": ["collection.*.franchise"] },
+            { "type": "del", "args": ["collection.*.additionals"] },
+            { "type": "del", "args": ["collection.*.additionalsPrices"] },
+            { "type": "del", "args": ["collection.*.agencyPrice"] },
+            { "type": "del", "args": ["collection.*.category"] },
+            { "type": "del", "args": ["collection.*.distanceUnit"] },
+            { "type": "del", "args": ["collection.*.fromDate"] },
+            { "type": "del", "args": ["collection.*.ilimitedKm"] },
+            { "type": "del", "args": ["collection.*.maxAllowedDistance"] },
+            { "type": "del", "args": ["collection.*.maxAllowedDistanceByDay"] },
+            { "type": "del", "args": ["collection.*.onlyQuote"] },
+            { "type": "del", "args": ["collection.*.price"] },
+            { "type": "del", "args": ["collection.*.priceItems"] },
+            { "type": "del", "args": ["collection.*.rateCode"] },
+            { "type": "del", "args": ["collection.*.returnPlace"] },
+            { "type": "del", "args": ["collection.*.salesCommision"] },
+            { "type": "del", "args": ["collection.*.supplier"] },
+            { "type": "del", "args": ["collection.*.toDate"] },
+            { "type": "del", "args": ["collection.*.totalDays"] },
+            { "type": "del", "args": ["collection.*.totalDaysString"] },
+            { "type": "del", "args": ["collection.*.webDeepLink"] },
+            { "type": "del", "args": ["collection.*.deliveryPlace"] }
+          ]
+        },
+        "auth/client-credentials": {
+          "client_id": "RentlyAPI",
+          "token_url": "https://api.rentlynetwork.com/connect/token",
+          "endpoint_params": {
+            "username": [
+              "rentingcarz"
+            ],
+            "password": [
+              "SECRETPASSWORD"
+            ],
+            "grant_type": [
+              "password"
+            ],
+            "client_id": [
+              "RentlyAPI"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "url_pattern": "/mock/fox/availability",
+      "encoding": "json",
+      "method": "GET",
+      "host": ["http://mock-server:1080"],
+      "group" : "fox_results",
+      "is_collection": false,
+      "extra_config": {
+        "proxy": {
+          "flatmap_filter": [
+            { "type": "move", "args": ["rentalOffers", "results"] },
+            { "type": "move", "args": ["results.*.vehicleClass.*.classCode", "results.*.sipp_code"]},
+            { "type": "move", "args": ["results.*.vehicleClass.*.classDesc", "results.*.model_car"]},
+            { "type": "move", "args": ["results.*.vehicleClass.*.classImageURL", "results.*.img"]},
+            { "type": "move", "args": ["results.*.rateProduct.*.pricing.*.currencyCode", "results.*.currency"]},
+            { "type": "move", "args": ["results.*.rateProduct.*.pricing.*.rateCharge", "results.*.rate_amount"]},
+            { "type": "move", "args": ["results.*.rateProduct.*.pricing.*.taxCharges", "results.*.tax_amount"]},
+            { "type": "move", "args": ["results.*.rateProduct.*.pricing.*.rentalDays", "results.*.total_days"]},
+            { "type": "move", "args": ["results.*.rateProduct.*.pricing.*.priceCode", "results.*.rate_code"]},
+            { "type": "move", "args": ["results.*.rateProduct.*.pricing.*.rateId", "results.*.rate_id"]},
+            { "type": "del", "args": ["rentalLocation"]},
+            { "type": "del", "args": ["returnLocation"]},
+            { "type": "del", "args": ["results.*.offerEndDate"]},
+            { "type": "del", "args": ["results.*.offerStartDate"]},
+            { "type": "del", "args": ["results.*.rateProduct"]},
+            { "type": "del", "args": ["results.*.vehicleClass"]},
+            { "type": "del", "args": ["message"]}
+          ]
+        }
+      }
+    }
+  ],
+  "input_query_strings": [
+    "from",
+    "to",
+    "DeliveryLocation",
+    "DropoffLocation",
+    "ilimitedKm"
+  ]
+},
+    {
+  "endpoint": "/products/hotels/availability",
+  "method": "GET",
+  "output_encoding": "json",
+  "timeout": "30s",
+  "concurrent_calls": 3,
+  "input_query_strings": [
+    "*"
+  ],
+  "backend": [
+    {
+      "host": [
+        "https://api.tbotechnology.in"
+      ],
+      "url_pattern": "/TBOHolidays_HotelAPI/search",
+      "method": "POST",
+      "extra_config": {
+        "modifier/martian": {
+          "header.Modifier": {
+            "scope": [
+              "request"
+            ],
+            "name": "Authorization",
+            "value": "Basic TGF0aW5DYXJ6OkxhdEA5NDUxMjc0Nw=="
+          }
+        },
+        "plugin/req-resp-modifier": {
+          "name": [
+            "tbo-request",
+            "tbo-provider"
+          ]
+        }
+      }
+    }
+  ]
+}
+,
+    {
+  "endpoint": "/products/hotels/availability/expedia/{product_id}",
+  "method": "GET",
+  "output_encoding": "json",
+  "timeout": "30s",
+  "concurrent_calls": 3,
+  "input_query_strings": [
+    "*"
+  ],
+  "backend": [
+    {
+      "url_pattern": "/property/availability?property_id={product_id}",
+      "method": "GET",
+      "host": [
+        "https://api2-hotels.dev.agentcars.com"
+      ],
+      "encoding": "json",
+      "extra_config": {
+        "modifier/martian": {
+          "header.Modifier": {
+            "scope": [
+              "request"
+            ],
+            "name": "backend_token",
+            "value": "cXSBJ92hTF7zxBfT3dxeh2dprxrbm9T3c2LjWqutqr9h5E7e"
+          }
+        },
+        "plugin/req-resp-modifier": {
+          "name": [
+            "expedia-provider"
+          ]
+        }
+      }
+    }
+  ]
+}
+
+  ]
+}

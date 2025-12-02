@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  krakend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: krakend-ce
+    platform: linux/arm64/v8
+    ports:
+      - "8080:8080"
+    volumes:
+      # Mount your custom configuration file (watch mode will detect changes)
+      - ./config:/etc/krakend
+      # Optional: Mount plugins directory
+      - ./plugins:/opt/krakend/plugins
+      # Optional: Mount settings and partials for flexible configuration
+      - ./config/settings:/etc/krakend/settings
+      - ./config/partials:/etc/krakend/partials
+      - ./src:/src
+    environment:
+      - KRAKEND_PORT=8080
+      - FC_ENABLE=1
+      # Enable watch mode debugging
+      - FC_OUT=/etc/krakend/krakend.json
+    restart: unless-stopped
+    networks:
+      - krakend-network
+    # Add labels for better organization
+    command: [ "run", "-dc", "/etc/krakend/krakend.tmpl", "-d" ]  
+networks:
+  krakend-network:
+    driver: bridge

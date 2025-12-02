@@ -1,0 +1,646 @@
+{
+  "filters_available": {
+    "amenities": null,
+    "on_site_payment_types": null,
+    "popular_filters": null,
+    "property_types": [
+      {
+        "key": "16",
+        "value": "Departamento"
+      },
+      {
+        "key": "8",
+        "value": "Establecimiento todo incluido"
+      },
+      {
+        "key": "22",
+        "value": "Apart-hotel"
+      },
+      {
+        "key": "17",
+        "value": "Casa de vacaciones privada"
+      },
+      {
+        "key": "7",
+        "value": "Condominio"
+      },
+      {
+        "key": "1",
+        "value": "Hotel"
+      },
+      {
+        "key": "5",
+        "value": "Bed and breakfast"
+      },
+      {
+        "key": "23",
+        "value": "Resort de condominios"
+      },
+      {
+        "key": "3",
+        "value": "Resort"
+      },
+      {
+        "key": "15",
+        "value": "Lodge"
+      },
+      {
+        "key": "14",
+        "value": "Villa"
+      },
+      {
+        "key": "43",
+        "value": "Hotel cápsula"
+      },
+      {
+        "key": "6",
+        "value": "Casa de huéspedes"
+      }
+    ]
+  },
+  "found": 60,
+  "getData": {
+    "checkin": "2025-12-18",
+    "checkout": "2025-12-17",
+    "country_code": "US",
+    "language": "es-MX",
+    "occupancy": "1",
+    "region_id": "6260342"
+  },
+  "property_searched": null,
+  "result_id": "c5c0b259-a8f3-425c-be4a-a5b16b36e4cf",
+  "results": [
+    {
+      "distance_block": 0.5,
+      "properties": [
+        {
+          "available": false,
+          "breakfast_included": false,
+          "checkin": {},
+          "checkout": {},
+          "distance": 0.04,
+          "distance_unit": "KM",
+          "fees": {},
+          "fully_refundable": false,
+          "images": [
+            "https://i.travelapi.com/lodging/119000000/118940000/118938800/118938708/6af717cb_b.jpg",
+            "https://i.travelapi.com/lodging/119000000/118940000/118938800/118938708/814802e9_b.jpg",
+            "https://i.travelapi.com/lodging/119000000/118940000/118938800/118938708/4925bae9_b.jpg",
+            "https://i.travelapi.com/lodging/119000000/118940000/118938800/118938708/63aac659_b.jpg",
+            "https://i.travelapi.com/lodging/119000000/118940000/118938800/118938708/288fd283_b.jpg"
+          ],
+          "location": {
+            "latitude": 20.847871,
+            "longitude": -86.876045
+          },
+          "nights": -1,
+          "onsite_payments": {
+            "currency": "",
+            "types": null
+          },
+          "preferred": false,
+          "property_id": "118938708",
+          "property_type": {
+            "id": "22",
+            "name": "Apart-hotel"
+          },
+          "rank": 436084,
+          "rate": {
+            "all_inclusive": false,
+            "all_meals": false,
+            "breakfast_included": false,
+            "cancel_penalties": null,
+            "ex_exclusive": 0,
+            "ex_gross_profit": 0,
+            "ex_inclusive": 0,
+            "ex_marketing_fee": 0,
+            "markup": 0,
+            "nonrefundable_date_ranges": null,
+            "refundable": false,
+            "taxes": 0,
+            "total": 9999999999999
+          },
+          "stars": 2.5,
+          "title": "Lalola By Andiani Travel"
+        },
+        {
+          "available": false,
+          "breakfast_included": false,
+          "checkin": {},
+          "checkout": {},
+          "distance": 0.08,
+          "distance_unit": "KM",
+          "fees": {},
+          "fully_refundable": false,
+          "guest_count": 177,
+          "guest_score": "3.5",
+          "images": [
+            "https://i.travelapi.com/lodging/12000000/11610000/11603300/11603281/7077705b_b.jpg",
+            "https://i.travelapi.com/lodging/12000000/11610000/11603300/11603281/e3d25449_b.jpg",
+            "https://i.travelapi.com/lodging/12000000/11610000/11603300/11603281/99f7ded5_b.jpg",
+            "https://i.travelapi.com/lodging/12000000/11610000/11603300/11603281/ba312a84_b.jpg",
+            "https://i.travelapi.com/lodging/12000000/11610000/11603300/11603281/7f0562bd_b.jpg"
+          ],
+          "location": {
+            "latitude": 20.847254,
+            "longitude": -86.876893
+          },
+          "nights": -1,
+          "onsite_payments": {
+            "currency": "",
+            "types": null
+          },
+          "preferred": false,
+          "property_id": "11603281",
+          "property_type": {
+            "id": "1",
+            "name": "Hotel"
+          },
+          "rank": 160699,
+          "rate": {
+            "all_inclusive": false,
+            "all_meals": false,
+            "breakfast_included": false,
+            "cancel_penalties": null,
+            "ex_exclusive": 0,
+            "ex_gross_profit": 0,
+            "ex_inclusive": 0,
+            "ex_marketing_fee": 0,
+            "markup": 0,
+            "nonrefundable_date_ranges": null,
+            "refundable": false,
+            "taxes": 0,
+            "total": 9999999999999
+          },
+          "stars": 3,
+          "title": "Posada Amor Hotel Boutique"
+        },
+        {
+          "available": false,
+          "breakfast_included": false,
+          "checkin": {},
+          "checkout": {},
+          "distance": 0.11,
+          "distance_unit": "KM",
+          "fees": {},
+          "fully_refundable": false,
+          "images": [
+            "https://i.travelapi.com/lodging/123000000/122660000/122653500/122653429/12503085_b.jpg",
+            "https://i.travelapi.com/lodging/123000000/122660000/122653500/122653429/914471fe_b.jpg",
+            "https://i.travelapi.com/lodging/123000000/122660000/122653500/122653429/52d339f7_b.jpg",
+            "https://i.travelapi.com/lodging/123000000/122660000/122653500/122653429/6310365c_b.jpg",
+            "https://i.travelapi.com/lodging/123000000/122660000/122653500/122653429/e0e06cdc_b.jpg"
+          ],
+          "location": {
+            "latitude": 20.847555,
+            "longitude": -86.877435
+          },
+          "nights": -1,
+          "onsite_payments": {
+            "currency": "",
+            "types": null
+          },
+          "preferred": false,
+          "property_id": "122653429",
+          "property_type": {
+            "id": "6",
+            "name": "Casa de huéspedes"
+          },
+          "rank": 99999999,
+          "rate": {
+            "all_inclusive": false,
+            "all_meals": false,
+            "breakfast_included": false,
+            "cancel_penalties": null,
+            "ex_exclusive": 0,
+            "ex_gross_profit": 0,
+            "ex_inclusive": 0,
+            "ex_marketing_fee": 0,
+            "markup": 0,
+            "nonrefundable_date_ranges": null,
+            "refundable": false,
+            "taxes": 0,
+            "total": 9999999999999
+          },
+          "stars": 3,
+          "title": "Strela-Penthouse w jacuzzi & ocean view"
+        },
+        {
+          "available": false,
+          "breakfast_included": false,
+          "checkin": {},
+          "checkout": {},
+          "distance": 0.13,
+          "distance_unit": "KM",
+          "fees": {},
+          "fully_refundable": false,
+          "images": [
+            "https://i.travelapi.com/lodging/113000000/112620000/112614300/112614295/12be4106_b.jpg",
+            "https://i.travelapi.com/lodging/113000000/112620000/112614300/112614295/455ea28b_b.jpg",
+            "https://i.travelapi.com/lodging/113000000/112620000/112614300/112614295/acbf0401_b.jpg",
+            "https://i.travelapi.com/lodging/113000000/112620000/112614300/112614295/5677ca1d_b.jpg",
+            "https://i.travelapi.com/lodging/113000000/112620000/112614300/112614295/4202b2f8_b.jpg"
+          ],
+          "location": {
+            "latitude": 20.848294,
+            "longitude": -86.875222
+          },
+          "nights": -1,
+          "onsite_payments": {
+            "currency": "",
+            "types": null
+          },
+          "preferred": false,
+          "property_id": "112614295",
+          "property_type": {
+            "id": "22",
+            "name": "Apart-hotel"
+          },
+          "rank": 491385,
+          "rate": {
+            "all_inclusive": false,
+            "all_meals": false,
+            "breakfast_included": false,
+            "cancel_penalties": null,
+            "ex_exclusive": 0,
+            "ex_gross_profit": 0,
+            "ex_inclusive": 0,
+            "ex_marketing_fee": 0,
+            "markup": 0,
+            "nonrefundable_date_ranges": null,
+            "refundable": false,
+            "taxes": 0,
+            "total": 9999999999999
+          },
+          "stars": 2.5,
+          "title": "Palma Real by Andiani Travel"
+        },
+        {
+          "available": false,
+          "breakfast_included": false,
+          "checkin": {},
+          "checkout": {},
+          "distance": 0.16,
+          "distance_unit": "KM",
+          "fees": {},
+          "fully_refundable": false,
+          "guest_count": 33,
+          "guest_score": "4.1",
+          "images": [
+            "https://i.travelapi.com/lodging/42000000/41530000/41526800/41526736/ceaf546c_b.jpg",
+            "https://i.travelapi.com/lodging/42000000/41530000/41526800/41526736/fd62da9d_b.jpg",
+            "https://i.travelapi.com/lodging/42000000/41530000/41526800/41526736/91844481_b.jpg",
+            "https://i.travelapi.com/lodging/42000000/41530000/41526800/41526736/4fe9334d_b.jpg",
+            "https://i.travelapi.com/lodging/42000000/41530000/41526800/41526736/74d51c4d_b.jpg"
+          ],
+          "location": {
+            "latitude": 20.848497,
+            "longitude": -86.875047
+          },
+          "nights": -1,
+          "onsite_payments": {
+            "currency": "",
+            "types": null
+          },
+          "preferred": false,
+          "property_id": "41526736",
+          "property_type": {
+            "id": "16",
+            "name": "Departamento"
+          },
+          "rank": 630188,
+          "rate": {
+            "all_inclusive": false,
+            "all_meals": false,
+            "breakfast_included": false,
+            "cancel_penalties": null,
+            "ex_exclusive": 0,
+            "ex_gross_profit": 0,
+            "ex_inclusive": 0,
+            "ex_marketing_fee": 0,
+            "markup": 0,
+            "nonrefundable_date_ranges": null,
+            "refundable": false,
+            "taxes": 0,
+            "total": 9999999999999
+          },
+          "stars": 3,
+          "title": "Casa Velero Puerto Morelos"
+        },
+        {
+          "available": false,
+          "breakfast_included": false,
+          "checkin": {},
+          "checkout": {},
+          "distance": 0.19,
+          "distance_unit": "KM",
+          "fees": {},
+          "fully_refundable": false,
+          "guest_count": 21,
+          "guest_score": "4.0",
+          "images": [
+            "https://i.travelapi.com/lodging/107000000/106670000/106668000/106667918/243204c1_b.jpg",
+            "https://i.travelapi.com/lodging/107000000/106670000/106668000/106667918/91524004_b.jpg",
+            "https://i.travelapi.com/lodging/107000000/106670000/106668000/106667918/f06283e4_b.jpg",
+            "https://i.travelapi.com/lodging/107000000/106670000/106668000/106667918/6bee459b_b.jpg",
+            "https://i.travelapi.com/lodging/107000000/106670000/106668000/106667918/af7e3426_b.jpg"
+          ],
+          "location": {
+            "latitude": 20.849495,
+            "longitude": -86.875996
+          },
+          "nights": -1,
+          "onsite_payments": {
+            "currency": "",
+            "types": null
+          },
+          "preferred": false,
+          "property_id": "106667918",
+          "property_type": {
+            "id": "1",
+            "name": "Hotel"
+          },
+          "rank": 157734,
+          "rate": {
+            "all_inclusive": false,
+            "all_meals": false,
+            "breakfast_included": false,
+            "cancel_penalties": null,
+            "ex_exclusive": 0,
+            "ex_gross_profit": 0,
+            "ex_inclusive": 0,
+            "ex_marketing_fee": 0,
+            "markup": 0,
+            "nonrefundable_date_ranges": null,
+            "refundable": false,
+            "taxes": 0,
+            "total": 9999999999999
+          },
+          "stars": 3,
+          "title": "Areia Boutique Hotel - Puerto Morelos"
+        },
+        {
+          "available": false,
+          "breakfast_included": false,
+          "checkin": {},
+          "checkout": {},
+          "distance": 0.21,
+          "distance_unit": "KM",
+          "fees": {},
+          "fully_refundable": false,
+          "guest_count": 689,
+          "guest_score": "3.9",
+          "images": [
+            "https://i.travelapi.com/lodging/18000000/17120000/17119000/17118967/f673ba04_b.jpg",
+            "https://i.travelapi.com/lodging/18000000/17120000/17119000/17118967/3940bf3f_b.jpg",
+            "https://i.travelapi.com/lodging/18000000/17120000/17119000/17118967/3ea2172e_b.jpg",
+            "https://i.travelapi.com/lodging/18000000/17120000/17119000/17118967/9d50749e_b.jpg",
+            "https://i.travelapi.com/lodging/18000000/17120000/17119000/17118967/0329fd72_b.jpg"
+          ],
+          "location": {
+            "latitude": 20.846004,
+            "longitude": -86.877046
+          },
+          "nights": -1,
+          "onsite_payments": {
+            "currency": "",
+            "types": null
+          },
+          "preferred": false,
+          "property_id": "17118967",
+          "property_type": {
+            "id": "1",
+            "name": "Hotel"
+          },
+          "rank": 76872,
+          "rate": {
+            "all_inclusive": false,
+            "all_meals": false,
+            "breakfast_included": false,
+            "cancel_penalties": null,
+            "ex_exclusive": 0,
+            "ex_gross_profit": 0,
+            "ex_inclusive": 0,
+            "ex_marketing_fee": 0,
+            "markup": 0,
+            "nonrefundable_date_ranges": null,
+            "refundable": false,
+            "taxes": 0,
+            "total": 9999999999999
+          },
+          "stars": 3,
+          "title": "Hacienda Morelos Beach Front Hotel"
+        },
+        {
+          "available": false,
+          "breakfast_included": false,
+          "checkin": {},
+          "checkout": {},
+          "distance": 0.21,
+          "distance_unit": "KM",
+          "fees": {},
+          "fully_refundable": false,
+          "guest_count": 3,
+          "guest_score": "5.0",
+          "images": [
+            "https://i.travelapi.com/lodging/45000000/44770000/44769500/44769412/063056dd_b.jpg",
+            "https://i.travelapi.com/lodging/45000000/44770000/44769500/44769412/3ee7a287_b.jpg",
+            "https://i.travelapi.com/lodging/45000000/44770000/44769500/44769412/1107fe60_b.jpg",
+            "https://i.travelapi.com/lodging/45000000/44770000/44769500/44769412/10eb4bae_b.jpg",
+            "https://i.travelapi.com/lodging/45000000/44770000/44769500/44769412/92afe54b_b.jpg"
+          ],
+          "location": {
+            "latitude": 20.849661,
+            "longitude": -86.876131
+          },
+          "nights": -1,
+          "onsite_payments": {
+            "currency": "",
+            "types": null
+          },
+          "preferred": false,
+          "property_id": "44769412",
+          "property_type": {
+            "id": "16",
+            "name": "Departamento"
+          },
+          "rank": 621920,
+          "rate": {
+            "all_inclusive": false,
+            "all_meals": false,
+            "breakfast_included": false,
+            "cancel_penalties": null,
+            "ex_exclusive": 0,
+            "ex_gross_profit": 0,
+            "ex_inclusive": 0,
+            "ex_marketing_fee": 0,
+            "markup": 0,
+            "nonrefundable_date_ranges": null,
+            "refundable": false,
+            "taxes": 0,
+            "total": 9999999999999
+          },
+          "stars": 3.5,
+          "title": "Casa la Catrina"
+        },
+        {
+          "available": false,
+          "breakfast_included": false,
+          "checkin": {},
+          "checkout": {},
+          "distance": 0.41,
+          "distance_unit": "KM",
+          "fees": {},
+          "fully_refundable": false,
+          "guest_count": 40,
+          "guest_score": "4.0",
+          "images": [
+            "https://i.travelapi.com/lodging/22000000/21250000/21241900/21241810/56e215be_b.jpg",
+            "https://i.travelapi.com/lodging/22000000/21250000/21241900/21241810/066198db_b.jpg",
+            "https://i.travelapi.com/lodging/22000000/21250000/21241900/21241810/2105477d_b.jpg",
+            "https://i.travelapi.com/lodging/22000000/21250000/21241900/21241810/c1742649_b.jpg",
+            "https://i.travelapi.com/lodging/22000000/21250000/21241900/21241810/af80fac7_b.jpg"
+          ],
+          "location": {
+            "latitude": 20.851343,
+            "longitude": -86.87535
+          },
+          "nights": -1,
+          "onsite_payments": {
+            "currency": "",
+            "types": null
+          },
+          "preferred": false,
+          "property_id": "21241810",
+          "property_type": {
+            "id": "22",
+            "name": "Apart-hotel"
+          },
+          "rank": 300000,
+          "rate": {
+            "all_inclusive": false,
+            "all_meals": false,
+            "breakfast_included": false,
+            "cancel_penalties": null,
+            "ex_exclusive": 0,
+            "ex_gross_profit": 0,
+            "ex_inclusive": 0,
+            "ex_marketing_fee": 0,
+            "markup": 0,
+            "nonrefundable_date_ranges": null,
+            "refundable": false,
+            "taxes": 0,
+            "total": 9999999999999
+          },
+          "stars": 3.5,
+          "title": "Kaam Accommodations"
+        },
+        {
+          "available": false,
+          "breakfast_included": false,
+          "checkin": {},
+          "checkout": {},
+          "distance": 0.43,
+          "distance_unit": "KM",
+          "fees": {},
+          "fully_refundable": false,
+          "guest_count": 3,
+          "guest_score": "3.0",
+          "images": [
+            "https://i.travelapi.com/lodging/111000000/110700000/110691600/110691570/14e76f0d_b.jpg",
+            "https://i.travelapi.com/lodging/111000000/110700000/110691600/110691570/d3522124_b.jpg",
+            "https://i.travelapi.com/lodging/111000000/110700000/110691600/110691570/dc2b8c89_b.jpg",
+            "https://i.travelapi.com/lodging/111000000/110700000/110691600/110691570/bb7fb705_b.jpg",
+            "https://i.travelapi.com/lodging/111000000/110700000/110691600/110691570/580ca91f_b.jpg"
+          ],
+          "location": {
+            "latitude": 20.851,
+            "longitude": -86.874093
+          },
+          "nights": -1,
+          "onsite_payments": {
+            "currency": "",
+            "types": null
+          },
+          "preferred": false,
+          "property_id": "110691570",
+          "property_type": {
+            "id": "1",
+            "name": "Hotel"
+          },
+          "rank": 190747,
+          "rate": {
+            "all_inclusive": false,
+            "all_meals": false,
+            "breakfast_included": false,
+            "cancel_penalties": null,
+            "ex_exclusive": 0,
+            "ex_gross_profit": 0,
+            "ex_inclusive": 0,
+            "ex_marketing_fee": 0,
+            "markup": 0,
+            "nonrefundable_date_ranges": null,
+            "refundable": false,
+            "taxes": 0,
+            "total": 9999999999999
+          },
+          "stars": 3,
+          "title": "Kabañas & Beach Club Ojo de Agua"
+        },
+        {
+          "available": false,
+          "breakfast_included": false,
+          "checkin": {},
+          "checkout": {},
+          "distance": 0.5,
+          "distance_unit": "KM",
+          "fees": {},
+          "fully_refundable": false,
+          "guest_count": 936,
+          "guest_score": "3.7",
+          "images": [
+            "https://i.travelapi.com/lodging/19000000/18610000/18604400/18604381/32f500c7_b.jpg",
+            "https://i.travelapi.com/lodging/19000000/18610000/18604400/18604381/0836ea0c_b.jpg",
+            "https://i.travelapi.com/lodging/19000000/18610000/18604400/18604381/35654a10_b.jpg",
+            "https://i.travelapi.com/lodging/19000000/18610000/18604400/18604381/6e7d7057_b.jpg",
+            "https://i.travelapi.com/lodging/19000000/18610000/18604400/18604381/29625fd1_b.jpg"
+          ],
+          "location": {
+            "latitude": 20.851792,
+            "longitude": -86.874091
+          },
+          "nights": -1,
+          "onsite_payments": {
+            "currency": "",
+            "types": null
+          },
+          "preferred": false,
+          "property_id": "18604381",
+          "property_type": {
+            "id": "1",
+            "name": "Hotel"
+          },
+          "rank": 40083,
+          "rate": {
+            "all_inclusive": false,
+            "all_meals": false,
+            "breakfast_included": false,
+            "cancel_penalties": null,
+            "ex_exclusive": 0,
+            "ex_gross_profit": 0,
+            "ex_inclusive": 0,
+            "ex_marketing_fee": 0,
+            "markup": 0,
+            "nonrefundable_date_ranges": null,
+            "refundable": false,
+            "taxes": 0,
+            "total": 9999999999999
+          },
+          "stars": 3,
+          "title": "Hotel Ojo de Agua"
+        }
+      ],
+      "total": 11
+    }
+  ]
+}
