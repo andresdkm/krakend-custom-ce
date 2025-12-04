@@ -1,23 +1,18 @@
 version: '3.8'
 
 services:
-  krakend:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: krakend-ce
-    platform: linux/arm64/v8
+  krakend-custom:
+    image: krakend-ce:local
+    # platform: linux/arm64/v8
     ports:
-      - "8080:8080"
+      - "9080:8080"
     volumes:
       # Mount your custom configuration file (watch mode will detect changes)
       - ./config:/etc/krakend
       # Optional: Mount plugins directory
       - ./plugins:/opt/krakend/plugins
-      # Optional: Mount settings and partials for flexible configuration
-      - ./config/settings:/etc/krakend/settings
-      - ./config/partials:/etc/krakend/partials
-      - ./src:/src
+      # - ./ppp:/opt/krakend/plugins
+      # - ./src:/src
     environment:
       - KRAKEND_PORT=8080
       - FC_ENABLE=1
@@ -28,6 +23,27 @@ services:
       - krakend-network
     # Add labels for better organization
     command: [ "run", "-dc", "/etc/krakend/krakend.tmpl", "-d" ]  
+
+  krakend-builder:
+    image: krakend-ce-builder:local
+    ports:
+      - "9081:8080"
+    volumes:
+      - ./src:/app/src
+      - ./pkg:/app/pkg
+      - ./plugins:/app/plugins
+      - ./builder/scripts:/app/scripts
+      - ./go.mod:/app/go.mod
+      - ./go.sum:/app/go.sum
+    restart: unless-stopped
+    environment:
+      - CGO_ENABLED=1
+    entrypoint: /bin/sh -c
+    command: [ "sleep infinity" ]
+    # command: [ "/app/scripts/build-plugins.sh && echo 'Build complete' && sleep infinity" ]
+    networks:
+      - krakend-network
+
 networks:
   krakend-network:
     driver: bridge

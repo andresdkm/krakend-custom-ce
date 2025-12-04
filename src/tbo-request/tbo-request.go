@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"hotels-common/models"
-	"hotels-common/transformers"
+	"kraken-builder-plugins/pkg/hotels/common/models"
+	"kraken-builder-plugins/pkg/hotels/common/transformers"
 	"net/http"
 )
 

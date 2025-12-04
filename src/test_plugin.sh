@@ -11,7 +11,7 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 PLUGINS_DIR="./plugins"
-KRAKEND_CONTAINER="krakend"
+KRAKEND_CONTAINER="krakend-ce:local"
 TEST_RESULTS=()
 PASSED=0
 FAILED=0
