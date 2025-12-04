@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"hotels-common/models"
+	"kraken-builder-plugins/pkg/hotels/common/models"
 	"os"
 	"testing"
 )

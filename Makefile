@@ -1,15 +1,46 @@
 .PHONY: build up down logs restart clean validate help
 
+# Directories
+KRAKEND_CE_DIR := ../krakend-ce
+
 # Variables
 COMPOSE_FILE = docker-compose.yml
 SERVICE_NAME = krakend
+
+# Estas variables deben coincidir con las de ../krakend-ce/Makefile
+GOLANG_VERSION := 1.25.3
+ALPINE_VERSION := 3.21
+VERSION := 2.12.0
 
 help: ## Muestra esta ayuda
 	@echo "Comandos disponibles:"
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
-build: ## Construye la imagen de KrakenD CE
-	docker-compose -f $(COMPOSE_FILE) build
+buildg: ## Construye la imagen de KrakenD CE
+	echo go.mod > ../krakend-ce/go.mode
+	cd ../krakend-ce/ && make docker
+# 	make docker-builder
+# 	cd ../krakend-custome-ce/ 
+# 	docker-compose -f $(COMPOSE_FILE) build
+
+# Build the container using the Dockerfile (alpine)
+docker:
+	cp -a ../krakend-ce/go.bck ../krakend-ce/go.mod
+	cat goBuilderDeps >> ../krakend-ce/go.mod
+# 	docker build --no-cache --pull --build-arg GOLANG_VERSION=$(GOLANG_VERSION) --build-arg ALPINE_VERSION=$(ALPINE_VERSION) -t krakend-ce:local -f $(KRAKEND_CE_DIR)/Dockerfile $(KRAKEND_CE_DIR)
+	docker build --build-arg GOLANG_VERSION=$(GOLANG_VERSION) --build-arg ALPINE_VERSION=$(ALPINE_VERSION) -t krakend-ce:local -f $(KRAKEND_CE_DIR)/Dockerfile $(KRAKEND_CE_DIR)
+
+docker-builder:
+	cp -a ../krakend-ce/go.bck ../krakend-ce/go.mod
+	cat goBuilderDeps >> ../krakend-ce/go.mod
+# 	docker build --no-cache --pull --target builder --build-arg GOLANG_VERSION=$(GOLANG_VERSION) --build-arg ALPINE_VERSION=$(ALPINE_VERSION) -t krakend-ce-builder:local -f $(KRAKEND_CE_DIR)/Dockerfile $(KRAKEND_CE_DIR)
+	docker build --target builder --build-arg GOLANG_VERSION=$(GOLANG_VERSION) --build-arg ALPINE_VERSION=$(ALPINE_VERSION) -t krakend-ce-builder:local -f $(KRAKEND_CE_DIR)/Dockerfile $(KRAKEND_CE_DIR)
+
+docker-builder-linux:
+	cp -a ../krakend-ce/go.bck ../krakend-ce/go.mod
+	cat goBuilderDeps >> ../krakend-ce/go.mod
+# 	docker build --no-cache --pull --target builder --build-arg GOLANG_VERSION=${GOLANG_VERSION} -t krakend-ce-builder:local-linux-generic -f $(KRAKEND_CE_DIR)/Dockerfile $(KRAKEND_CE_DIR)
+
 
 up: ## Inicia el servicio de KrakenD
 	docker-compose -f $(COMPOSE_FILE) up -d

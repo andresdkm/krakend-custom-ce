@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	"hotels-common/core"
-	"hotels-common/models"
+	"kraken-builder-plugins/pkg/hotels/common/core"
+	"kraken-builder-plugins/pkg/hotels/common/models"
 	"net/http"
 )
 
